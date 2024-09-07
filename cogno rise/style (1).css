@@ -1,0 +1,157 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2c3e50, #4c669f);
+    color: #fff;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#toast {
+    font-size: 1.8rem;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Theme button */
+.theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.theme-button:hover {
+    transform: rotate(20deg);
+}
+
+/* First row */
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#result {
+    width: 68%;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 22px;
+    text-align: left;
+    background-color: #34495e;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#clear-button {
+    background-color: #e74c3c;
+    color: #fff;
+    height: 70px;
+    border: none;
+    border-radius: 22px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-button:hover {
+    background-color: #c0392b;
+}
+
+/* Rows styling */
+.second-row, .third-row, .fourth-row, .fifth-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Buttons styling */
+input[type="button"] {
+    width: 22%;
+    height: 61px;
+    font-size: 1.2rem;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    background-color: #34495e;
+    color: #fff;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.8); /* Subtle glow */
+}
+
+input[type="button"]:hover {
+    background-color: #053836;
+    box-shadow: 0 0 20px rgb(102, 253, 2); /* Brighter glow on hover */
+}
+
+input[type="button"]:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    #result {
+        font-size: 1.2rem;
+        height: 40px;
+    }
+
+    input[type="button"] {
+        font-size: 1rem;
+        height: 45px;
+    }
+}
